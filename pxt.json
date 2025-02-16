@@ -1,0 +1,33 @@
+{
+    "name": "Hyperpolyx",
+    "description": "",
+    "dependencies": {
+        "device": "*",
+        "pxt-raycasting": "github:aqeeaqee/pxt-raycasting#v0.3.18",
+        "arcade-tile-util": "github:microsoft/arcade-tile-util#v1.2.0",
+        "ArcadeMIDI": "github:UnsignedArduino/ArcadeMIDI#af121437d59fd6b2cec54501ac437db1eaa766f5",
+        "arcade-sprite-util": "github:jwunderl/arcade-sprite-util#v0.4.1",
+        "ColorBlock": "github:UnsignedArduino/ColorBlock#ac7b9500e40045cf1ddd8c5b7481d11bcb317f5f"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md",
+        "assets.json",
+        "images.g.jres",
+        "images.g.ts",
+        "tilemap.g.jres",
+        "tilemap.g.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "target": "1.12.58",
+        "targetId": "arcade"
+    },
+    "supportedTargets": [
+        "arcade"
+    ],
+    "preferredEditor": "blocksprj"
+}
