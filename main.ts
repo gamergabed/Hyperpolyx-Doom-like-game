@@ -233,7 +233,7 @@ forever(function () {
     } else if (Song == 2) {
         music.play(music.createSong(assets.song`Binary Terror`), music.PlaybackMode.UntilDone)
     } else if (Song == 3) {
-    	
+        music.play(music.createSong(assets.song`Halt and Catch Fire`), music.PlaybackMode.UntilDone)
     } else if (false) {
     	
     }
