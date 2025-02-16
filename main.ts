@@ -101,22 +101,22 @@ function CreateMap (Map: number) {
             if (_xImg.getPixel(0, 0) == 0) {
                 mySprite2 = sprites.create(_xImg, SpriteKind.Item)
                 tiles.placeOnTile(mySprite2, tiles.getTileLocation(_xNum, _yNum))
-                for (let index = 0; index <= 15; index++) {
-                    if (_xImg.getPixel(index + 1, 0) == 2) {
-                        if (!(mySprite2.tileKindAt(TileDirection.Left, assets.tile`transparency16`)) || !(mySprite2.tileKindAt(TileDirection.Right, assets.tile`transparency16`))) {
-                            DrawSpriteWall(mySprite2, false)
-                        } else {
-                            DrawSpriteWall(mySprite2, true)
-                        }
-                        sprites.destroy(mySprite2)
-                        break;
+                if (_xImg.getPixel(1, 0) == 2) {
+                    if (!(mySprite2.tileKindAt(TileDirection.Left, assets.tile`transparency16`)) || !(mySprite2.tileKindAt(TileDirection.Right, assets.tile`transparency16`))) {
+                        DrawSpriteWall(mySprite2, false)
+                    } else {
+                        DrawSpriteWall(mySprite2, true)
                     }
-                    if (_xImg.getPixel(index + 1, 0) == 3) {
-                        scene.backgroundImage().replace(2, _xImg.getPixel(index + 2, 0))
-                        scene.backgroundImage().replace(8, _xImg.getPixel(index + 3, 0))
-                        sprites.destroy(mySprite2)
-                        break;
-                    }
+                    sprites.destroy(mySprite2)
+                }
+                if (_xImg.getPixel(1, 0) == 3) {
+                    scene.backgroundImage().replace(2, _xImg.getPixel(2, 0))
+                    scene.backgroundImage().replace(8, _xImg.getPixel(3, 0))
+                    sprites.destroy(mySprite2)
+                }
+                if (_xImg.getPixel(1, 0) == 4) {
+                    Song = _xImg.getPixel(2, 0)
+                    sprites.destroy(mySprite2)
                 }
                 if (_xImg.equals(img`
                     . . . . . . . . . . . . . . . . 
@@ -201,6 +201,8 @@ let BlasterImg: Image[][] = []
 let Maps: tiles.TileMapData[] = []
 let Blaster = 0
 let mySprite: Sprite = null
+game.splash("HYPERPOLYX", "By Ominouswolf")
+game.splash("Inspired by", "Those games in the 90's with the cool raycasting and bsp tree rendering thingys :D")
 INIT()
 mySprite = Render.getRenderSpriteVariable()
 CreateMap(1)
@@ -224,4 +226,15 @@ game.onUpdate(function () {
 })
 game.onUpdateInterval(1, function () {
     BlastTimer += -1
+})
+forever(function () {
+    if (Song == 1) {
+        music.play(music.createSong(assets.song`FactoryPump`), music.PlaybackMode.UntilDone)
+    } else if (Song == 2) {
+        music.play(music.createSong(assets.song`Binary Terror`), music.PlaybackMode.UntilDone)
+    } else if (Song == 3) {
+    	
+    } else if (false) {
+    	
+    }
 })
