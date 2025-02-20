@@ -7,7 +7,9 @@
         "arcade-tile-util": "github:microsoft/arcade-tile-util#v1.2.0",
         "ArcadeMIDI": "github:UnsignedArduino/ArcadeMIDI#af121437d59fd6b2cec54501ac437db1eaa766f5",
         "arcade-sprite-util": "github:jwunderl/arcade-sprite-util#v0.4.1",
-        "ColorBlock": "github:UnsignedArduino/ColorBlock#ac7b9500e40045cf1ddd8c5b7481d11bcb317f5f"
+        "ColorBlock": "github:UnsignedArduino/ColorBlock#ac7b9500e40045cf1ddd8c5b7481d11bcb317f5f",
+        "arcade-sprite-data": "github:microsoft/arcade-sprite-data#v0.2.1",
+        "Timers": "github:microsoft/arcade-timers#v1.1.0"
     },
     "files": [
         "main.blocks",
@@ -23,7 +25,7 @@
         "test.ts"
     ],
     "targetVersions": {
-        "target": "1.12.58",
+        "target": "1.12.59",
         "targetId": "arcade"
     },
     "supportedTargets": [
